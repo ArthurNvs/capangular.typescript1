@@ -68,10 +68,8 @@ cliente = new Cliente("João Gomes Almeida", carrinho, endereco, cartao);
 pedido = new Pedido(17561921, "07/12/2020", true, 0.08, cliente, carrinho.produtos, carrinho.valorTotal, endereco);
 
 //implementação da compra
-compra = new Compra(pedido, true, cartao.numeroCartao);
-
-if(compra.compraCredito)
-    compra.compraCredito;
+compra = new Compra(pedido, true, cliente.cartao.numeroCartao);
 
 console.log(compra.valor);
-console.log(compra.tipoCompra);
+console.log(carrinho.valorTotal);
+console.log(pedido.valor);

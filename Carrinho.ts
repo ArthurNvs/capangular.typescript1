@@ -1,10 +1,8 @@
-import { Compra } from "./Compra";
-import { Pedido } from "./Pedido";
 import { Produto } from "./Produto";
 
 export class Carrinho {
     produtos: Produto[] = [];
-    valorTotal: number;
+    valorTotal = 0;
 
     constructor(){}
 

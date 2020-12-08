@@ -1,5 +1,3 @@
-import { Carrinho } from "./Carrinho";
-import { Cartao } from "./Cartao";
 import { Cliente } from "./Cliente";
 import { Endereco } from "./Endereco";
 import { Produto } from "./Produto";
@@ -10,11 +8,12 @@ export class Pedido {
     data: string;
     tarifa: boolean;
     imposto: number;
-    valor: number;
     endereco: Endereco;
 
     cliente: Cliente;
     produtos: Produto[] = [];
+
+    valor = 0;
     
     constructor(numero: number, 
                 data: string, 

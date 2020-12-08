@@ -4,6 +4,7 @@ exports.Pedido = void 0;
 var Pedido = /** @class */ (function () {
     function Pedido(numero, data, tarifa, imposto, cliente, produtos, valor, endereco) {
         this.produtos = [];
+        this.valor = 0;
         this.numero = numero;
         this.data = data;
         this.tarifa = tarifa;
