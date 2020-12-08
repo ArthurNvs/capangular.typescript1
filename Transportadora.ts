@@ -5,3 +5,7 @@ export class Transportadora {
         this.nome = nome;
     }
 }
+
+export interface ITransportadora {
+    nome: string
+}
