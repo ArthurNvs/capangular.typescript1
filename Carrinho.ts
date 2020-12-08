@@ -12,3 +12,8 @@ export class Carrinho {
     }
 
 }
+
+export interface ICarrinho {
+    produtos: Produto[],
+    valorTotal: number
+}

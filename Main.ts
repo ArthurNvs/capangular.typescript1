@@ -63,12 +63,18 @@ carrinho.addProduto(produto2);
 carrinho.addProduto(produto3);
 
 //implementação cliente
-cliente = new Cliente("João Gomes Almeida", carrinho, endereco, cartao);
+cliente = new Cliente({
 
-pedido = new Pedido(17561921, "07/12/2020", true, 0.08, cliente, carrinho.produtos, carrinho.valorTotal, endereco);
+});
+
+pedido = new Pedido({
+
+});
 
 //implementação da compra
-compra = new Compra(pedido, true, cliente.cartao.numeroCartao);
+compra = new Compra({
+    
+});
 
 console.log(compra.valor);
 console.log(carrinho.valorTotal);

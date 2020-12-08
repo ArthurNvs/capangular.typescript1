@@ -4,11 +4,18 @@ export class Endereco{
     casa: number;
     numero: number;
 
-    constructor(rua: string, cep: number, casa: number, numero: number) {
-        this.numero = numero;
-        this.casa = casa;
-        this.cep = cep;
-        this.rua = rua;
+    constructor(endereco: IEndereco) {
+        this.numero = endereco.numero;
+        this.casa = endereco.casa;
+        this.cep = endereco.cep;
+        this.rua = endereco.rua;
 
     }
+}
+
+export interface IEndereco {
+    numero: number,
+    casa: number,
+    cep: number,
+    rua: string
 }

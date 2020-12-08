@@ -1,7 +1,6 @@
 import { Carrinho } from "./Carrinho";
 import { Cartao } from "./Cartao";
 import { Endereco } from "./Endereco";
-import { Produto } from "./Produto";
 
 export class Cliente {
     nomeCompleto: string;
@@ -9,11 +8,18 @@ export class Cliente {
     endereco: Endereco;
     cartao: Cartao;
     
-    constructor(nomeCompleto: string, carrinho: Carrinho, endereco: Endereco, cartao: Cartao) {
-        this.nomeCompleto = nomeCompleto; 
-        this.carrinho = carrinho;
-        this.endereco = endereco;
-        this.cartao = cartao;
+    constructor(cliente: ICliente) {
+        this.nomeCompleto = cliente.nomeCompleto; 
+        this.carrinho = cliente.carrinho;
+        this.endereco = cliente.endereco;
+        this.cartao = cliente.cartao;
     }
 
+}
+
+export interface ICliente {
+    nomeCompleto: string,
+    carrinho: Carrinho,
+    endereco: Endereco,
+    cartao: Cartao
 }

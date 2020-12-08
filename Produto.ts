@@ -1,11 +1,18 @@
+import { IPedido } from "./Pedido";
+
 export class Produto {
 
     nome: string;
     preco: number;
 
-    constructor(nome: string, preco:number){
-        this.nome = nome;
-        this.preco = preco;
+    constructor(produto: IProduto){
+        this.nome = produto.nome;
+        this.preco = produto.preco;
     }
 
+}
+
+export interface IProduto {
+    nome: string,
+    preco: number
 }

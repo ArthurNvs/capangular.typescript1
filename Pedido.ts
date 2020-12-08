@@ -15,23 +15,27 @@ export class Pedido {
 
     valor = 0;
     
-    constructor(numero: number, 
-                data: string, 
-                tarifa: boolean, 
-                imposto: number, 
-                cliente: Cliente, 
-                produtos: Produto[], 
-                valor: number, 
-                endereco: Endereco) {
-        this.numero = numero;
-        this.data = data;
-        this.tarifa = tarifa;
-        this.imposto = imposto;
-        this.cliente = cliente;
-        this.produtos = produtos;
-        this.valor = valor;
-        this.endereco = endereco;
-
+    constructor(pedido: IPedido){
+        this.numero = pedido.numero;
+        this.data = pedido.data;
+        this.tarifa = pedido.tarifa;
+        this.imposto = pedido.imposto;
+        this.cliente = pedido.cliente;
+        this.produtos = pedido.produtos;
+        this.valor = pedido.valor;
+        this.endereco = pedido.endereco;
     }
 
 }
+
+export interface IPedido {
+    numero: number, 
+    data: string, 
+    tarifa: boolean, 
+    imposto: number, 
+    cliente: Cliente, 
+    produtos: Produto[], 
+    valor: number, 
+    endereco: Endereco
+ } 
+        
