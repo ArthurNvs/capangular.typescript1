@@ -2,17 +2,17 @@
 exports.__esModule = true;
 exports.Pedido = void 0;
 var Pedido = /** @class */ (function () {
-    function Pedido(numero, data, tarifa, imposto, cliente, produtos, valor, endereco) {
+    function Pedido(pedido) {
         this.produtos = [];
         this.valor = 0;
-        this.numero = numero;
-        this.data = data;
-        this.tarifa = tarifa;
-        this.imposto = imposto;
-        this.cliente = cliente;
-        this.produtos = produtos;
-        this.valor = valor;
-        this.endereco = endereco;
+        this.numero = pedido.numero;
+        this.data = pedido.data;
+        this.tarifa = pedido.tarifa;
+        this.imposto = pedido.imposto;
+        this.cliente = pedido.cliente;
+        this.produtos = pedido.produtos;
+        this.valor = pedido.valor;
+        this.endereco = pedido.endereco;
     }
     return Pedido;
 }());

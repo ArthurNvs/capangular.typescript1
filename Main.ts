@@ -64,16 +64,31 @@ carrinho.addProduto(produto3);
 
 //implementação cliente
 cliente = new Cliente({
-
+    nomeCompleto: "João Silva",
+    carrinho: carrinho,
+    endereco: endereco,
+    cartao: cartao
 });
 
 pedido = new Pedido({
-
+    numero: 754274,
+    data: "07/12/2020",
+    tarifa: true,
+    imposto: 0.08,
+    cliente: cliente,
+    produtos: carrinho.produtos,
+    valor: carrinho.valorTotal,
+    endereco: endereco
 });
 
 //implementação da compra
 compra = new Compra({
-    
+    pedido: pedido,
+    pagamentoCredito: true,
+    cartao: cartao,
+    numeroCartao: cartao.numeroCartao,
+    imposto: pedido.imposto,
+    valor: pedido.valor
 });
 
 console.log(compra.valor);

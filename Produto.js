@@ -2,9 +2,9 @@
 exports.__esModule = true;
 exports.Produto = void 0;
 var Produto = /** @class */ (function () {
-    function Produto(nome, preco) {
-        this.nome = nome;
-        this.preco = preco;
+    function Produto(produto) {
+        this.nome = produto.nome;
+        this.preco = produto.preco;
     }
     return Produto;
 }());

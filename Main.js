@@ -49,10 +49,31 @@ carrinho.addProduto(produto1);
 carrinho.addProduto(produto2);
 carrinho.addProduto(produto3);
 //implementação cliente
-cliente = new Cliente_1.Cliente("João Gomes Almeida", carrinho, endereco, cartao);
-pedido = new Pedido_1.Pedido(17561921, "07/12/2020", true, 0.08, cliente, carrinho.produtos, carrinho.valorTotal, endereco);
+cliente = new Cliente_1.Cliente({
+    nomeCompleto: "João Silva",
+    carrinho: carrinho,
+    endereco: endereco,
+    cartao: cartao
+});
+pedido = new Pedido_1.Pedido({
+    numero: 754274,
+    data: "07/12/2020",
+    tarifa: true,
+    imposto: 0.08,
+    cliente: cliente,
+    produtos: carrinho.produtos,
+    valor: carrinho.valorTotal,
+    endereco: endereco
+});
 //implementação da compra
-compra = new Compra_1.Compra(pedido, true, cliente.cartao.numeroCartao);
+compra = new Compra_1.Compra({
+    pedido: pedido,
+    pagamentoCredito: true,
+    cartao: cartao,
+    numeroCartao: cartao.numeroCartao,
+    imposto: pedido.imposto,
+    valor: pedido.valor
+});
 console.log(compra.valor);
 console.log(carrinho.valorTotal);
 console.log(pedido.valor);

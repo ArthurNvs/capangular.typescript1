@@ -2,11 +2,11 @@
 exports.__esModule = true;
 exports.Endereco = void 0;
 var Endereco = /** @class */ (function () {
-    function Endereco(rua, cep, casa, numero) {
-        this.numero = numero;
-        this.casa = casa;
-        this.cep = cep;
-        this.rua = rua;
+    function Endereco(endereco) {
+        this.numero = endereco.numero;
+        this.casa = endereco.casa;
+        this.cep = endereco.cep;
+        this.rua = endereco.rua;
     }
     return Endereco;
 }());
